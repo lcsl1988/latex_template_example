@@ -1,0 +1,73 @@
+% Arquivo LaTeX de exemplo de dissertação a ser apresentados ao PPGI do Centro de Ciências Exatas e Tecnologia (CCET) - UNIRIO
+%
+% Versão 1.0: Sábado, 14 de Setembro de 2013
+%
+% Criação: Wander dos Santos Vasconcellos
+\documentclass[12pt, oneside, a4paper]{book}
+\usepackage[brazil]{babel} % linguagem do documento
+\usepackage[a4paper,left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.5cm]{geometry} % definição das margens
+\usepackage{setspace} % habilitando o espaço entre linhas
+\usepackage{titlesec}
+\usepackage[normalem]{ulem} % habilitando palavras sublinhadas
+\usepackage{amssymb, amsmath, pxfonts} % permite símbolos matemáticos
+\usepackage{mathrsfs} % permite uso de fontes para conjuntos
+\usepackage{graphicx} % permite inserção de figuras
+\usepackage{algorithmic}	% pacote para uso na definição do ambiente para algorítmos
+\usepackage{framed}
+\usepackage{booktabs}
+\usepackage{comment}
+\usepackage{hyperref}
+\usepackage{xr}
+\usepackage[mathcal]{euler}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[Extension=.ttf,
+             BoldFont=timesbd,
+             ItalicFont=timesi,
+             BoldItalicFont=timesbi]{times} % habilitando a fonte do texto
+\setromanfont[Extension=.ttf,
+             BoldFont=timesbd,
+             ItalicFont=timesi,
+             BoldItalicFont=timesbi]{times}
+\setsansfont[Extension=.ttf,
+             BoldFont=arialbd,
+             ItalicFont=ariali,
+             BoldItalicFont=arialbi]{arial}
+\setmonofont[Extension=.ttf,
+             BoldFont=courbd,
+             ItalicFont=couri,
+             BoldItalicFont=courbi]{cour}
+\linespread{1.3} % espaço entre linhas de 1.5
+\setlength{\parskip}{10pt} % espaço entre parágrafos
+\setcounter{secnumdepth}{3} % habilita a variável \thesubsubsection
+\setcounter{tocdepth}{3} % Índice até subsubsection
+\titleformat{\chapter}[hang]{\fontsize{16}{16}\normalfont\bfseries\filleft\selectfont}{\thechapter.}{0pt}{\normalfont\bfseries}
+\titlespacing{\chapter}{0pt}{72pt}{60pt}
+\titleformat{\section}[hang]{\fontsize{12}{12}\normalfont\bfseries\selectfont}{\thesection}{0pt}{\normalfont\bfseries}
+\titlespacing{\section}{0pt}{24pt}{12pt}
+\titleformat{\subsection}[hang]{\fontsize{12}{12}\normalfont\bfseries\selectfont}{\thesubsection}{0pt}{\normalfont\bfseries}
+\titlespacing{\subsection}{0pt}{12pt}{6pt}
+\titleformat{\subsubsection}[hang]{\fontsize{12}{12}\normalfont\bfseries\selectfont}{\thesubsubsection}{0pt}{\normalfont\bfseries}
+\titlespacing{\subsubsection}{0pt}{6pt}{3pt}
+\begin{document}
+    \pagestyle{empty}
+    \include{capa}
+    \include{folhaDeRosto}
+    \include{fichaCatalografica}
+    \pagestyle{plain}
+    \pagenumbering{roman}
+    \include{dedicatoria}
+    \include{agradecimento}
+    \include{resumo}
+    \include{abstract}
+    \include{indiceTexto}
+    \include{indiceFiguras}
+    \include{indiceTabelas}
+    \include{listaNomenclaturas}
+    \pagestyle{headings}
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+    \input{introducao}
+    \input{capitulo2}
+    \include{bibliografia}
+\end{document}
